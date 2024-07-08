@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
+         //   background-color: rgb(6, 136, 10);
         }
-        h1{
+        
+        h1 {
+            
             text-align: center;
             font-size: 50px;
             margin-bottom: 40px;
         }
-        img{
+
+        img {
             display: block;
             margin-left: 630px;
-            border: 1px solid black;
+            border: 5px solid black;
+            border-radius: 10px;
             padding: 40px;
+        }
+        .img-container{
+            justify-content: center;
+            display: flex;
+        }
+        button{
+            padding: 15px;
+            margin: 50px;
+            font-size: 20px;
+            border: 3px solid black;
+            font-weight: 800;
+            border-radius: 50px 90px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -26,5 +45,11 @@
 <body>
     <h1>Text Tool</h1>
     <img src="lightbulb.png" height="200px" width="200px">
+    <div class="img-container">
+        <button type="button">ON</button>
+        <button type="button">OFF</button>
+    </div>
+
 </body>
+
 </html>
