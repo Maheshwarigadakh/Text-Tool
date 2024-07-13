@@ -9,30 +9,31 @@
         * {
             margin: 0;
             padding: 0;
-         //   background-color: rgb(6, 136, 10);
+
         }
-        
         h1 {
-            
+
             text-align: center;
             font-size: 50px;
             margin-bottom: 40px;
         }
-
         img {
             display: block;
             margin-left: 630px;
             border: 5px solid black;
             border-radius: 10px;
+            box-shadow: 4px 3px 20px 0px black;
+
             padding: 40px;
         }
-        .img-container{
+        .img-container {
             justify-content: center;
             display: flex;
         }
-        button{
+
+        button {
             padding: 15px;
-            margin: 50px;
+            margin:30px 720px;
             font-size: 20px;
             border: 3px solid black;
             font-weight: 800;
@@ -43,13 +44,22 @@
 </head>
 
 <body>
-    <h1>Text Tool</h1>
-    <img src="lightbulb.png" height="200px" width="200px">
-    <div class="img-container">
-        <button type="button">ON</button>
-        <button type="button">OFF</button>
-    </div>
+    <h1>Text Toggle</h1>
+    <img src="lightbulboff.png" height="200px" width="200px" id="img-bulb">
 
+    <div class="btn-container">
+        <button type="button" onclick="togglebulb()">
+            Toggle
+        </button>
+    </div>
+    <script>
+        function togglebulb() {
+            const bulbElement = document.getElementById("img-bulb");
+
+            bulbElement.src = bulbElement.src.includes("lightbulboff.png") ?
+            "./lightbulbon.png" : "./lightbulboff.png"
+            }
+    </script>
 </body>
 
 </html>
