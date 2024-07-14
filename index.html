@@ -9,15 +9,13 @@
         * {
             margin: 0;
             padding: 0;
-
         }
         h1 {
-
             text-align: center;
             font-size: 50px;
             margin-bottom: 40px;
         }
-        img {
+        #img-bulb {
             display: block;
             margin-left: 630px;
             border: 5px solid black;
@@ -40,15 +38,41 @@
             border-radius: 50px 90px;
             cursor: pointer;
         }
+        .modes{
+            height: 5px;            
+            cursor: pointer;
+        }
+        
+        .bg-dark{
+            background-color: black;
+            color:white;
+        }
+        .bg-light{
+            background-color: gray;
+            color: black;
+        }
+        .btn-dark{
+            background-color: #990099;
+            color: white;
+        }
+        .btn-light{
+            background-color: #ff751a;
+            color: #000;
+        }
     </style>
 </head>
 
-<body>
+<body class="bg-light" id="main-body">
     <h1>Text Toggle</h1>
+    <div class="modes">
+        <img src="sun.png" class="light1" onclick="enablelight()">
+        <img src="moon.png" class="light1" onclick="enabledark()">
+
+    </div>
     <img src="lightbulboff.png" height="200px" width="200px" id="img-bulb">
 
     <div class="btn-container">
-        <button type="button" onclick="togglebulb()">
+        <button type="button btn-light" id="btnt-oggle" onclick="togglebulb()">
             Toggle
         </button>
     </div>
@@ -58,6 +82,28 @@
 
             bulbElement.src = bulbElement.src.includes("lightbulboff.png") ?
             "./lightbulbon.png" : "./lightbulboff.png"
+            }
+            function enablelight(){
+                const mainbody = document.getElementById("main-body")
+                mainbody.classList.remove("bg-light")
+                mainbody.classList.add("bg-dark")
+
+                consttoggleButton = document.getElementById("btn-toggle")
+                togglebulb.classList.remove("btn-light")
+                togglebulb.classList.remove("btn-dark")
+
+
+            }
+            function enabledark(){
+                const mainbody = document.getElementById("main-body")
+                mainbody.classList.remove("bg-dark")
+                mainbody.classList.add("bg-light")
+
+                consttoggleButton = document.getElementById("btn-toggle")
+                togglebulb.classList.remove("btn-dark")
+                togglebulb.classList.remove("btn-light")
+
+
             }
     </script>
 </body>
