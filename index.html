@@ -44,12 +44,12 @@
         }
         
         .bg-dark{
-            background-color: black;
-            color:white;
+            background-color: gray;
+            color:black;
         }
         .bg-light{
-            background-color: gray;
-            color: black;
+            background-color: black;
+            color: white;
         }
         .btn-dark{
             background-color: #990099;
@@ -90,9 +90,7 @@
 
                 consttoggleButton = document.getElementById("btn-toggle")
                 togglebulb.classList.remove("btn-light")
-                togglebulb.classList.remove("btn-dark")
-
-
+                togglebulb.classList.add("btn-dark")
             }
             function enabledark(){
                 const mainbody = document.getElementById("main-body")
@@ -101,9 +99,7 @@
 
                 consttoggleButton = document.getElementById("btn-toggle")
                 togglebulb.classList.remove("btn-dark")
-                togglebulb.classList.remove("btn-light")
-
-
+                togglebulb.classList.add("btn-light")
             }
     </script>
 </body>
